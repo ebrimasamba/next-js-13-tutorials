@@ -1,5 +1,5 @@
 export const fetchGraphQL = async (query) => {
-  return fetch(
+  const response = await fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
       method: "POST",
@@ -8,13 +8,8 @@ export const fetchGraphQL = async (query) => {
         Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
       },
       body: JSON.stringify({ query }),
+      //   cache: "no-store",
     }
-  ).then((response) => response.json());
-};
-
-export const fetchData = async (entryID) => {
-  const response = await fetch(
-    `https://64f1bd810e1e60602d2436ba.mockapi.io/api/`
   );
   return await response.json();
 };
