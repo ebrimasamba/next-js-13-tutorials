@@ -2,26 +2,240 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  font-family: "Questrial";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* .heading-font,
+.heading-font * {
+  font-family: "REM";
+} */
+
+h1 strong {
+  @apply text-secondary;
+}
+
+.company-profile p {
+  @apply mb-6 !important;
+}
+
+.company-profile strong {
+  @apply text-secondary !important;
+}
+
+.company-profile p:last-child {
+  @apply mb-0 !important;
+}
+
+.splide__pagination .splide__pagination__page {
+  @apply bg-gray-300 rounded-none w-2 h-1  !important;
+}
+/* .team .splide__pagination {
+  bottom: -20px !important;
+} */
+
+.splide__pagination .is-active {
+  @apply bg-secondary w-5  !important;
+}
+
+@keyframes pingAnimation {
+  0% {
+    opacity: 50%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  /* 0%{
+        opacity: 100%;
+        transform: scale(1);
+    } */
+}
+
+.animate-text {
+  transform: translateY(50%);
+  opacity: 0;
+  animation: showUp ease-out 0.9s forwards 0.2s;
+}
+
+.animate-tagline {
+  transform: translateY(50%);
+  opacity: 0;
+  animation: showUp ease-in-out 0.7s forwards 0.5s;
+}
+
+.animate-btn {
+  transform: translateY(50%);
+  opacity: 0;
+  animation: showUp ease-in-out 0.7s forwards 0.5s;
+}
+
+.animate-overlay {
+  animation: overlayAnimte ease-in-out 0.7s forwards !important;
+  opacity: 0 !important;
+}
+
+@keyframes showUp {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.thumbnail.is-active {
+  @apply opacity-70 border-secondary;
+}
+
+.animate-zoom-work-cards {
+  animation: zoomInOut ease-in-out 30s 0.1s infinite !important;
+}
+
+.animate-zoom {
+  animation: zoomIn ease-in 28s 0.1s forwards !important;
+}
+
+.animate-overlay {
+  animation: overlayAnimate ease-in-out 0.7s forwards !important;
+  opacity: 0 !important;
+}
+
+.animate-heading-text {
+  transform: translateY(100%);
+  animation: animateUp 7s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s;
+}
+.animate-heading-tagline {
+  transform: translateY(100%);
+  animation: animateUp 6.7s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.9s;
+}
+
+.animate-sideways {
+  transform: translateX(100%);
+  animation: animateLeft 6.7s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.3s;
+}
+
+.spin {
+  animation: spin 60s linear infinite;
+}
+
+.service-information p {
+  @apply mb-4;
+}
+
+.service-information ul {
+  @apply list-none;
+}
+
+.service-information li {
+  @apply mb-4;
+}
+
+.service-information li:last-child {
+  @apply mb-0;
+}
+.service-information li strong {
+  @apply text-zinc-700;
+}
+
+/* -------------------------KEYFRAMES------------------------------ */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes overlayAnimate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes overlayAnimate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateUp {
+  0% {
+    transform: translateY(102%);
+  }
+  14% {
+    transform: translateY(0%);
+  }
+
+  86% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(102%);
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translateX(-102%);
+  }
+  14% {
+    transform: translateX(0%);
+  }
+
+  86% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-102%);
+  }
 }
