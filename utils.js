@@ -8,7 +8,7 @@ export const fetchGraphQL = async (query) => {
         Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
       },
       body: JSON.stringify({ query }),
-      cache: "force-cache",
+      cache: "no-cache",
     }
   );
   return await response.json();
