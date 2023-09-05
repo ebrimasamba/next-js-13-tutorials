@@ -9,7 +9,7 @@ import HeroCarouselSlide from "./HeroCarouselSlide";
 import Image from "next/image";
 import Link from "next/link";
 
-const HeroCarousel = () => {
+const HeroCarousel = ({ data }) => {
   const prevButton = useRef();
   const nextButton = useRef();
   const overlay = useRef();
