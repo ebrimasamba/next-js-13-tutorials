@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* font-family: var(--font-inter); */
-  @apply font-mono !important;
-}
+/* * {
+  font-family: "Questrial";
+} */
 
 /* .heading-font,
 .heading-font * {
