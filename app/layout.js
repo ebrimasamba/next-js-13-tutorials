@@ -1,4 +1,11 @@
 import "./globals.css";
+import { Luckiest_Guy } from "next/font/google";
+
+const lukiestGuy = Luckiest_Guy({
+  subsets: ["latin"],
+  variable: "--font-luckiest-guy",
+  weight: "400",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +29,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className={lukiestGuy.variable}>{children}</body>
     </html>
   );
 }
