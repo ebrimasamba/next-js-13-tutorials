@@ -1,5 +1,6 @@
 import "./globals.css";
-import { Inter, Nunito } from "next/font/google";
+
+import { inter, roboto_mono } from "./fonts";
 
 export const metadata = {
   title: "Create Next App",
@@ -7,18 +8,13 @@ export const metadata = {
 };
 
 // If loading a variable font, you don't need to specify the font weight
-const inter = Nunito({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <head>
-        
-      </head> */}
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${inter.variable} ${roboto_mono.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

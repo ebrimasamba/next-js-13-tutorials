@@ -9,7 +9,7 @@ export const fetchGraphQL = async (query) => {
       },
       body: JSON.stringify({ query }),
       // cache: "no-cache",
-      next: { revalidate: 1000 },
+      next: { revalidate: 10000 },
     }
   );
   return await response.json();
