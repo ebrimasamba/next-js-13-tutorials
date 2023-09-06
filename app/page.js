@@ -13,7 +13,7 @@ export default async function Home() {
 
   return (
     <div className="flex items-center justify-center text-center h-screen">
-      <div className=" max-w-3xl">
+      <div className="max-w-3xl">
         <h1 className="font-bold text-4xl mb-10 text-center">
           {data.data.heroSectionCollection.items[0].title}
         </h1>
