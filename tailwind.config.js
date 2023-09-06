@@ -22,7 +22,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      lukeistGuy: ["var(--font-luckiest-guy)"],
+      montserrat: ["var(--font-montserrat)"],
     },
   },
   plugins: [],

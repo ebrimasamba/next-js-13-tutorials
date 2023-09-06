@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  font-family: "Questrial";
-} */
-
-/* .heading-font,
-.heading-font * {
-  font-family: "REM";
-} */
-
 h1 strong {
   @apply text-secondary;
 }

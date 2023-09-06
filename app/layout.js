@@ -1,9 +1,9 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 
-const lukiestGuy = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-luckiest-guy",
+  variable: "--font-montserrat",
   weight: "variable",
 });
 
@@ -15,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={lukiestGuy.variable}>{children}</body>
+      <body className={`${montserrat.variable}  font-montserrat`}>
+        {children}
+      </body>
     </html>
   );
 }
